@@ -1,0 +1,94 @@
+body {
+    background-color: #41A7F5;
+    font-family: 'Comic Sans MS', sans-serif; /* Fuente similar */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+div {
+    text-align: center;
+}
+
+.titulo-principal h1 {
+    background-color: #F5CF54;
+    color: #FFF;
+    font-size: 24px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.subtitulo h2 {
+    background-color: #ED56AD;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.opciones-genero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #58CAC1;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto 20px;
+}
+
+.opcion {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+}
+
+.icono {
+    height: 50px;
+    width: 50px;
+}
+
+a.btn-cancelar {
+    display: inline-block;
+    background-color: #E2504C;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    height: 50px;
+    width: 150px;
+    line-height: 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.btn-confirmar {
+    background-color: #58CAC1;
+    color: #FFF;
+}
+
+button {
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    height: 50px;
+    width: 150px;
+    border-radius: 25px;
+    cursor: pointer;
+}
