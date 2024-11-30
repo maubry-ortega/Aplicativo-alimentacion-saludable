@@ -1,0 +1,86 @@
+body {
+    background-color: #41A7F5;
+    font-family: 'Comic Sans MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+div {
+    text-align: center;
+}
+
+.ingreso-titulo h1 {
+    background-color: #F5CF54;
+    color: #FFF;
+    font-size: 18px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.ingreso-nombre {
+    background-color: #ED56AD;
+    font-size: 24px;
+    color: #FFF;
+    border: none;
+    text-align: center;
+    height: 50px;
+    width: 250px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    height: 50px;
+    width: 150px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn-cancelar {
+    background-color: #E2504C;
+    color: #FFF;
+}
+
+a.btn-confirmar {
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    
+    height: 50px;
+    width: 150px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px; /* Para centrar el texto verticalmente */
+    background-color: #58CAC1;
+    color: #FFF;
+    text-decoration: none; /* Quitamos el subrayado del enlace */
+}
+
+.circulo {
+    width: 100px;
+    height: 100px;
+    border-radius: 100% 0 0 0;
+    background-color: #F5CF54;
+    position: absolute;
+    bottom: 0; 
+    right: 0; 
+}
