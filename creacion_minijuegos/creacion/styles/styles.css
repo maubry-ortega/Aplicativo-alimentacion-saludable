@@ -1,0 +1,141 @@
+/* Estilos globales */
+body {
+    background-color: #41A7F5;
+    font-family: 'Comic Sans MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-columns: 70% 30%;
+    gap: 20px;
+}
+
+/* Header */
+.header {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.header h1 {
+    background-color: #F5CF54;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 32px;
+    margin: 0;
+}
+
+/* Título del tema */
+.tema {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.tema h2 {
+    background-color: #ED56AD;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 24px;
+    margin: 0;
+    width: 40%;
+    
+}
+
+/* Sección de objetivo */
+.objetivo {
+    grid-column: 1 / span 1;
+    background-color: #58CAC1;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.objetivo h3 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.objetivo p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Sección lateral derecha */
+.info-panel {
+    grid-column: 2 / span 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.revisar-estudiantes,
+.codigo-sala {
+    background-color: #58CAC1;
+    border-radius: 15px;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.revisar-estudiantes h3,
+.codigo-sala h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.revisar-estudiantes p,
+.codigo-sala .codigo {
+    font-size: 24px;
+    margin: 5px 0 0;
+}
+
+.codigo-sala .codigo {
+    background-color: #F5CF54;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Botón agregar clase */
+.boton-agregar {
+    width: 120px;
+    height: 50px;
+    position: absolute;
+    bottom: 20px; 
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-agregar a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ED56AD;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.boton-agregar a:hover {
+    background-color: #C14492;
+}

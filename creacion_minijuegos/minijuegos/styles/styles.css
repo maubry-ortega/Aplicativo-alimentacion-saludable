@@ -1,0 +1,81 @@
+body {
+    background-color: #41A7F5;
+    font-family: 'Comic Sans MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo-principal h1 {
+    background-color: #F5CF54;
+    color: #FFF;
+    font-size: 24px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.subtitulo h2 {
+    background-color: #ED56AD;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tarjeta h3 {
+    font-size: 18px;
+    color: #ED56AD;
+    margin: 10px 0;
+}
+
+.tarjeta p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+}
+
+.tarjeta button {
+    background-color: #ED56AD;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta button:hover {
+    background-color: #C14492;
+}
