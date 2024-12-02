@@ -79,8 +79,19 @@ a.btn-cancelar {
 }
 
 .btn-confirmar {
+    display: inline-block;
     background-color: #58CAC1;
     color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    height: 50px;
+    width: 150px;
+    line-height: 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
 button {

@@ -1,0 +1,132 @@
+body {
+    background-color: #f4f8fb;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .game-header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffcc00, #ff8800);
+    color: white;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .game-header h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  .game-header p {
+    font-size: 1.5rem;
+  }
+
+  .vitamin-zone {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 200px;
+    position: relative;
+  }
+
+  .vitamin-zone h5 {
+    color: #ff8800;
+    font-weight: bold;
+  }
+
+  .food-item {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    display: inline-block;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: grab;
+  }
+
+  .food-item img {
+    width: 60%;
+    margin-top: 10px;
+  }
+
+  .lives {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    font-size: 2rem;
+    z-index: 10;
+  }
+
+  .lives i {
+    color: #ff0000;
+    margin-right: 10px;
+  }
+
+  .modal-content {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 30px;
+  }
+
+  .modal-header, .modal-footer {
+    border: none;
+  }
+
+  .modal-title {
+    font-size: 2.5rem;
+    color: #ff8800;
+    text-align: center;
+  }
+
+  .modal-body {
+    font-size: 1.6rem;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #fffdc0;
+    border-radius: 10px;
+  }
+
+  .modal-body.success {
+    background-color: #c3f2c4;
+    color: #2d7a2f;
+  }
+
+  .modal-body.error {
+    background-color: #f8c7c7;
+    color: #b13a3a;
+  }
+
+  .modal-body.info {
+    background-color: #fff4c4;
+    color: #ff9900;
+  }
+
+  .modal-body p {
+    font-size: 1.8rem;
+  }
+
+  .modal-body i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  @keyframes shake {
+0% { transform: translateX(0); }
+25% { transform: translateX(-5px); }
+50% { transform: translateX(5px); }
+75% { transform: translateX(-5px); }
+100% { transform: translateX(0); }
+}
+
+.food-item.shake {
+animation: shake 0.5s;
+}
+
+.vitamin-zone.correct {
+background-color: #c3f2c4; /* Verde */
+transition: background-color 0.5s;
+}

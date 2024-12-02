@@ -1,0 +1,78 @@
+/* === Estilos Generales === */
+body {
+  font-family: Arial, sans-serif; /* Corrección de 'sarif' */
+  background-color: #41A7F5;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* === Contenedor Principal === */
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+/* === Encabezado === */
+h2 {
+  background-color: #F5CF54;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+/* === Texto Informativo === */
+.info p {
+  font-size: 1em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* === Campo de Entrada === */
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+/* === Botones y Enlaces === */
+.confirmar,
+.cancel {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.confirmar {
+  background-color: #4CAF50;
+}
+
+.confirmar:hover {
+  background-color: #45A049;
+}
+
+.cancel {
+  background-color: #E53935;
+}
+
+.cancel:hover {
+  background-color: #D32F2F;
+}
