@@ -1,0 +1,68 @@
+body {
+        background-image: url(img/fondo_app_comida.png);
+        background-size: cover;       
+        /* background-position: center;  
+        background-repeat: no-repeat;  */
+    }
+
+h1{
+    background-color: #F5CF54;
+    color: white;
+    border-radius: 15px;
+    width: 90%;
+    height: 40px;
+}
+
+.saludo{
+    background-color: #ED56AD;
+    color: white;
+    border: 20%;
+    border-radius: 15px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+}
+
+.seleccion{
+        background-color: #58CAC1;
+        color: white;
+        border-radius: 15px;
+        width: 250px;
+        height: 40px;
+        text-align: center;
+}
+.circulos{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #F5CF54;
+    position: fixed;
+    bottom: -75px;    
+    right: -70px;   
+    padding: 15px; 
+}
+
+.botones{
+    margin-top: 14%;
+    margin-left: 40%;
+    font-size:larger;
+}
+
+.crear_sala{
+    background-color: #58CAC1;
+    color:white;;
+    border-radius: 10px;
+    padding: 15px;
+    margin-right: 55px;
+    border: 50px;
+}
+
+.mis_clases{
+    background-color: #F5CF54;
+    color:white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 55px;
+    border: 50px;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Vitaminas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+<div class="game-header">
+  <h1>Vitamin Game</h1>
+  <p>Arrastra los alimentos hacia la vitamina correcta</p>
+</div>
+
+<div class="lives">
+  <i class="fas fa-heart" id="heart1"></i>
+  <i class="fas fa-heart" id="heart2"></i>
+  <i class="fas fa-heart" id="heart3"></i>
+</div>
+
+<div class="container my-5">
+  <div class="row">
+    <!-- Zona de Vitaminas -->
+    <div class="col-md-4">
+      <div class="vitamin-zone" id="vitaminA" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h5>Vitamina A</h5>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="vitamin-zone" id="vitaminC" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h5>Vitamina C</h5>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="vitamin-zone" id="vitaminD" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h5>Vitamina D</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="row text-center mt-4">
+    <!-- Elementos de Alimentos -->
+    <div class="food-item" draggable="true" ondragstart="drag(event)" id="carrot" style="width: 200px; height: 250px; text-align: center;">
+      <img src="https://www.pngitem.com/pimgs/m/135-1359965_transparent-carrots-png-vegetable-carrot-png-download.png" alt="Carrot" style="width: 80%; margin-top: 20px;">
+      <p style="font-size: 1.2rem; margin-top: 15px;">Zanahoria</p>
+    </div>
+    <div class="food-item" draggable="true" ondragstart="drag(event)" id="orange" style="width: 200px; height: 250px; text-align: center;">
+      <img src="https://i.pinimg.com/736x/3c/bf/ec/3cbfec1259635898efae5b57ea3ddea3.jpg" alt="Orange" style="width: 80%; margin-top: 20px;">
+      <p style="font-size: 1.2rem; margin-top: 15px;">Naranja</p>
+    </div>
+    <div class="food-item" draggable="true" ondragstart="drag(event)" id="avocado" style="width: 200px; height: 250px; text-align: center;">
+      <img src="https://i.pinimg.com/originals/d7/ea/7a/d7ea7a3ad9110b018fbba872da72dbee.png" alt="Avocado" style="width: 80%; margin-top: 20px;">
+      <p style="font-size: 1.2rem; margin-top: 15px;">Aguacate</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modales -->
+<div class="modal" tabindex="-1" id="gameOverModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">¡Juego Terminado!</h5>
+      </div>
+      <div class="modal-body error">
+        <i class="fas fa-sad-tear"></i>
+        <p>¡Vaya! Has perdido todas tus vidas, pero no te preocupes, ¡puedes intentarlo de nuevo y mejorar!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal" onclick="restartGame()">Reiniciar Juego</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" id="victoryModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">¡Bien Hecho!</h5>
+      </div>
+      <div class="modal-body success">
+        <i class="fas fa-smile-beam"></i>
+        <p>¡Increíble! Has completado el juego. Hoy has aprendido acerca de las vitaminas. ¡No olvides consumirlas para estar saludable!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="restartGame()">Reiniciar Juego</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" id="encouragementModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body info">
+        <p id="encouragementMessage"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./assets/main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
