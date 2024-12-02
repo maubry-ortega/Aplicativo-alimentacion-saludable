@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vital Play Kids</title>
+  <style>
+    /* === Estilos Generales === */
+    body {
+      background-color: #41a7f5; /* Azul de fondo */
+      font-family: "Gill Sans", sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    /* === Contenedor Principal === */
+    .container {
+      width: 90%;
+      max-width: 700px;
+      background-color: #fff; /* Fondo blanco */
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      padding: 20px;
+      overflow: hidden;
+    }
+    
+    /* === Encabezado === */
+    .header {
+      background-color: #f5cf54; /* Amarillo */
+      border-radius: 0 50px 50px 0;
+      padding: 15px 30px;
+      margin-bottom: 20px;
+    }
+    
+    .titulo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+    /* === Contenedor de Clases === */
+    .clases-container {
+      background-color: #57d9c0; /* Verde Agua */
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .clases-header {
+      background-color: #ff66cc; /* Rosa */
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 25px;
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .clase-item {
+      background-color: #ff66cc; /* Rosa */
+      color: white;
+      text-align: center;
+      font-size: 16px;
+      padding: 10px 30px;
+      border-radius: 25px;
+      margin-top: 40px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .clase-item:hover {
+      transform: scale(1.05);
+    }
+    
+    /* === Botón Atrás === */
+    .boton-atras {
+      display: inline-block;
+      background-color: #ff66cc; /* Rosa */
+      color: #fff;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 30px;
+      border-radius: 25px;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .boton-atras:hover {
+      background-color: #e55bb5; /* Oscuro Rosa */
+      transform: translateY(-3px);
+    }
+    
+    </style>
+</head>
+<body>
+  <!-- Contenedor Principal -->
+  <div class="container">
+    <!-- Encabezado -->
+    <div class="header">
+      <div class="titulo">Vital Play Kids</div>
+    </div>
+
+    <!-- Sección de Clases -->
+    <div class="clases-container">
+      <div class="clases-header">Mis Clases</div>
+      <div class="clase-item">Clase 1</div>
+    </div>
+
+    <!-- Botón Atrás -->
+    <a href="../crear_sala/Seleccion.html" class="boton-atras">Atrás</a>
+  </div>
+</body>
+</html>

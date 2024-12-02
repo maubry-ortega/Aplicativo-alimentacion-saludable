@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Participantes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #88cffa;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .titulo {
+            background-color: #f6d465;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 12px;
+            border-radius: 10px;
+            width: 60%; /* Ajustado para evitar saltos de línea */
+            margin-bottom: 20px;
+        }
+        .contenedor-lista {
+            background-color: #fff;
+            border-radius: 10px;
+            width: 80%; /* Lista más ancha */
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative; /* Para posicionar elementos dentro del contenedor */
+        }
+        .fila {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            padding: 8px 0;
+        }
+        .numero {
+            background-color: #000;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px;
+            width: 40px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .nombre-genero {
+            background-color: #f6b6e2;
+            color: #fff;
+            flex-grow: 2;
+            padding: 8px 10px;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        .nombre-genero.masculino {
+            background-color: #78d7d1;
+        }
+        .puntaje {
+            background-color: #34d0cf;
+            color: #fff;
+            text-align: center;
+            padding: 8px;
+            width: 80px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .indicador-jugadores {
+            background-color: #5fa5d1;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            position: absolute;
+            bottom: -50px; /* Cercano al borde del fondo blanco */
+            left: 10px;
+        }
+        .boton {
+            background-color: #f670b9;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            position: absolute;
+            bottom: -50px; /* Cercano al borde del fondo blanco */
+            right: 10px;
+        }
+        .boton:hover {
+            background-color: #e05a9c;
+        }
+    </style>
+</head>
+<body>
+    <div class="titulo">Listado de Participantes</div>
+    <div class="contenedor-lista">
+        <div class="fila">
+            <div class="numero">#</div>
+            <div class="nombre-genero">Nombre / Género</div>
+            <div class="puntaje">Puntaje</div>
+        </div>
+        <div class="fila">
+            <div class="numero">1</div>
+            <div class="nombre-genero masculino">Jugador1 / Masculino</div>
+            <div class="puntaje">236</div>
+        </div>
+        <div class="fila">
+            <div class="numero">2</div>
+            <div class="nombre-genero">Jugador2 / Femenino</div>
+            <div class="puntaje">150</div>
+        </div>
+        <div class="fila">
+            <div class="numero">3</div>
+            <div class="nombre-genero masculino">Jugador3 / Masculino</div>
+            <div class="puntaje">180</div>
+        </div>
+        <div class="indicador-jugadores">7/20</div>
+        <a href="../creacion_minijuegos/minijuegos/index.html" class="boton">Volver</a>
+    </div>
+</body>
+</html>
