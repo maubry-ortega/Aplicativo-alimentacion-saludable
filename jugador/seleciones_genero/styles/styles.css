@@ -1,105 +1,146 @@
+/* Estilo para el cuerpo de la página */
 body {
-    background-color: #41A7F5;
-    font-family: 'Comic Sans MS', sans-serif; /* Fuente similar */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: url('../assets/FONDO.png') no-repeat center center fixed;
+    background-size: cover;
     position: relative;
+    color: white;
 }
 
-div {
-    text-align: center;
-}
-
-.titulo-principal h1 {
-    background-color: #F5CF54;
-    color: #FFF;
-    font-size: 24px;
-    border-radius: 25px;
-    padding: 10px 20px;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.subtitulo h2 {
-    background-color: #ED56AD;
-    color: #FFF;
-    font-size: 20px;
-    border-radius: 25px;
-    padding: 10px 20px;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.opciones-genero {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
+/* Barra amarilla */
+.header-bar {
+    display: flex;
     align-items: center;
-    background-color: #58CAC1;
-    border-radius: 20px;
-    padding: 20px;
-    width: 300px;
-    margin: 0 auto 20px;
+    justify-content: flex-start;
+    background-color: #FFEB3B;
+    padding: 10px 20px;
+    border-bottom-right-radius: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 80px;
 }
 
-.opcion {
-    background-color: #FFFFFF;
+.header-logo {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+}
+
+.header-title {
+    font-size: 2.2em;
+    color: hsl(0, 0%, 100%);
+    margin: 0;
+}
+
+/* Barra fucsia */
+.sub-bar {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 15%;
+    height: 60px;
+    background-color: #ED56AD;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-bar-title {
+    font-size: 1.8em;
+    color: white;
+    margin: 0;
+}
+
+/* Contenedor de selección */
+.role-container {
+    text-align: center;
+    background: #FFEB3B;
+    padding: 15px 30px;
     border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    border: 5px solid #FF9800;
+    margin-top: 150px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.highlight {
+    color: hsl(0, 0%, 100%);
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+/* Botones de selección de género */
+.role-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-align: center;
+    width: 160px;
+    height: 220px;
+    background-color: transparent;
+}
+
+.role-button:hover {
+    transform: scale(1.1);
+}
+
+/* Estado seleccionado */
+.role-button.selected {
+    background-color: #ED56AD; /* Fucsia */
+    color: white;
+}
+
+.role-button.selected .icon-container {
+    border: 2px solid #FF9800; /* Añade un borde a la imagen */
+}
+
+/* Botón para confirmar */
+.btn-confirmar {
+    font-size: 1.2em;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+.btn-cancelar {
+    font-size: 1.2em;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+/* Estilo de los iconos dentro de los botones */
+.icon-container {
+    width: 130px; /* Mantén el tamaño en px */
+    height: 130px; /* Igual altura y anchura para ser cuadrado */
+    margin-bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    width: 100px;
+    background-color: #FFEB3B;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.icono {
-    height: 50px;
-    width: 50px;
-}
-
-a.btn-cancelar {
-    display: inline-block;
-    background-color: #E2504C;
-    color: #FFF;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 25px;
-    height: 50px;
-    width: 150px;
-    line-height: 50px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.btn-confirmar {
-    display: inline-block;
-    background-color: #58CAC1;
-    color: #FFF;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 25px;
-    height: 50px;
-    width: 150px;
-    line-height: 50px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-button {
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    height: 50px;
-    width: 150px;
-    border-radius: 25px;
-    cursor: pointer;
+/* Ajuste de imagen */
+.icon-container img {
+    width: 100%; /* La imagen ocupa todo el contenedor */
+    height: 100%;
+    object-fit: contain; /* Ajusta la imagen sin recortarla, manteniendo su relación de aspecto */
 }

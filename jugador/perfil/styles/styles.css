@@ -1,169 +1,108 @@
-/* General */
-body {
-    background-color: #41A7F5;
-    font-family: 'Gill Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
+/* Barra de Título */
 .perfil-header {
-    background-color: #F5CF54;
+    background-color: #2C3E50; /* Azul oscuro */
     padding: 10px 20px;
-    border-radius: 0 50px 50px 0;
-    display: inline-block;
+    border-bottom-right-radius: 60px;
 }
 
-.perfil-titulo {
-    color: #FFF;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* Contenido del perfil */
+/* Contenido del Perfil */
 .perfil-contenido {
-    background-color: #FFF;
-    border-radius: 50px;
-    margin: 20px auto;
+    background-color: #F1F2F6; /* Gris muy suave para el fondo */
     padding: 20px;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 4px 8px #0000001a;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
 }
 
-/* Avatar y nombre */
-.perfil-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
+/* Avatar */
 .perfil-avatar {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
-    border: 2px solid #FFF;
-    box-shadow: 0 4px 8px #00000033;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
+/* Nombre y Edad */
 .perfil-nombre {
-    font-size: 24px;
+    font-size: 2em;
     font-weight: bold;
-    color: #333;
-    margin: 10px 0;
+    color: #34495E; /* Gris oscuro */
 }
 
-/* Barra de progreso */
-.perfil-progreso {
-    width: 80%;
-    margin-top: 10px;
+.perfil-edad {
+    font-size: 1.2em;
+    color: #7F8C8D; /* Gris claro */
 }
 
-.barra-progreso {
-    background-color: #E0E0E0;
-    height: 8px;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
+/* Descripción */
+.perfil-descripcion {
+    font-size: 1.1em;
+    color: #7F8C8D;
+    line-height: 1.6;
 }
 
-.progreso-actual {
-    background-color: #93E201;
+/* Barra de Progreso */
+.perfil-progreso .barra-progreso {
+    background-color: #BDC3C7; /* Gris claro */
+    border-radius: 10px;
+    height: 10px;
+    width: 100%;
+}
+
+.perfil-progreso .progreso-actual {
+    background-color: #2ECC71; /* Verde claro */
+    border-radius: 10px;
     height: 100%;
-    width: 50%;
-    border-radius: 5px;
 }
 
-.progreso-texto {
-    margin-top: 5px;
-    color: #888;
+/* Hobbies */
+.perfil-hobbies h4 {
+    font-size: 1.4em;
+    color: #2980B9; /* Azul para resaltar */
 }
 
-/* Logros y categorías */
-.logros-categorias {
-    margin-top: 20px;
-    text-align: left;
+.perfil-hobbies p {
+    font-size: 1.1em;
+    color: #7F8C8D;
 }
 
-.logros-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    margin-left: 10px;
+/* Botón Salir */
+.btn-salir {
+    background-color: #FF5722; /* Naranja suave */
+    color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.btn-salir:hover {
+    background-color: #E64A19; /* Naranja más oscuro */
+}
+
+/* Logros */
+.logros-categorias .logros-header {
+    background-color: #ED56AD; /* Fucsia suave */
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
 }
 
 .logros-titulo {
-    font-weight: bold;
-    color: #fff;
-    margin-left: 40%;
-    
-}
-
-.logros-color {
-    background-color: #E6CB60;
-    border-radius: 10px;
-    width: 100%;
-    font-size: 20px;
-    height: 50px;
-}
-
-.categoria-btn {
-    background-color: #F78FB3;
-    color: #FFF;
-    border: none;
-    height: 50px;
-    border-radius: 10px;
-    padding: 5px 15px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-/* Lista de logros */
-.logros-lista {
-    background-color: #F9F9F9;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.logro-item {
-    margin-bottom: 15px;
-    padding: 10px;
-    border-bottom: 1px solid #E0E0E0;
-}
-
-.logro-titulo {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 1.5em;
     color: #333;
 }
 
-.logro-desc {
-    font-size: 14px;
-    color: #666;
-}
-
+/* Estilo de Logros Completados */
 .logro-estado {
-    font-size: 14px;
+    color: #4CAF50; /* Verde suave */
     font-weight: bold;
-    margin-top: 5px;
 }
 
-.completado {
-    color: #4CAF50;
-}
-
-.no-completado {
-    color: #F44336;
-}
-
-.btn-salir {
-    background-color: #F44336;
-    color: #FFF;
-    border: none;
+/* Fondo de los logros */
+.logros-lista .logro-item {
+    background-color: #F8F9FA; /* Fondo suave para cada logro */
+    display: flex;
+    align-items: center;
+    padding: 10px;
     border-radius: 10px;
-    padding: 5px 15px;
-    font-size: 14px;
-    cursor: pointer;
 }
