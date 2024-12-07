@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laberinto de Nutrición</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<div class="game-header">
+  <h1>Laberinto de Nutrición</h1>
+  <p>Selecciona tu modo de juego</p>
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gameModeModal">Seleccionar Modo</button>
+  <h2>Puntuación: <span id="scoreDisplay">0</span></h2>
+  <div id="powerDisplay">Habilidades: Ninguna</div>
+  <div id="achievementsDisplay">Logros: Ninguno</div>
+  <div id="timerDisplay">Tiempo: <span id="timer">60</span> s</div>
+</div>
+
+<div class="lives">
+  <i class="fas fa-heart" id="heart1"></i>
+  <i class="fas fa-heart" id="heart2"></i>
+  <i class="fas fa-heart" id="heart3"></i>
+</div>
+
+<div class="container my-5">
+  <div id="gameArea">
+    <!-- Aquí se generará el laberinto -->
+  </div>
+</div>
+
+<!-- Modal para seleccionar el modo de juego -->
+<div class="modal" tabindex="-1" id="gameModeModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Selecciona el Modo de Juego</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <button class="btn btn-secondary" onclick="startGame('normal')">Modo Normal</button>
+        <button class="btn btn-warning" onclick="startGame('timeAttack')">Modo Contrarreloj</button>
+        <button class="btn btn-success" onclick="startGame('infinite')">Modo Infinito</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modales de Fin de Juego -->
+<div class="modal" tabindex="-1" id="gameOverModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">¡Juego Terminado!</h5>
+      </div>
+      <div class="modal-body error">
+        <i class="fas fa-sad-tear"></i>
+        <p>¡Vaya! Has perdido todas tus vidas. Intenta de nuevo.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal" onclick="restartGame()">Reiniciar Juego</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" id="victoryModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">¡Bien Hecho!</h5>
+      </div>
+      <div class="modal-body success">
+        <i class="fas fa-smile-beam"></i>
+        <p>¡Has recolectado todas las frutas! ¡Sigue así!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="restartGame()">Reiniciar Juego</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./assets/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

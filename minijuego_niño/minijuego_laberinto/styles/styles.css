@@ -1,0 +1,127 @@
+body {
+    background-color: #f4f8fb;
+    font-family: 'Arial', sans-serif;
+}
+
+.game-header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: white;
+    border-radius: 0 0 20px 20px;
+}
+
+.game-header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.game-header p {
+    font-size: 1.5rem;
+}
+
+#gameArea {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border: 2px solid #ff8800;
+    overflow: hidden;
+    margin-top: 20px;
+    background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0');
+    background-size: cover;
+}
+
+.food-item {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    transition: transform 0.5s;
+}
+
+.obstacle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    transition: transform 0.5s;
+}
+
+.bonus-item {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.lives {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    z-index: 10;
+}
+
+.lives i {
+    color: #ff0000;
+    margin-right: 10px;
+}
+
+#powerDisplay, #achievementsDisplay {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+#timerDisplay {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.modal-content {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.modal-title {
+    font-size: 2.5rem;
+    color: #ff8800;
+    text-align: center;
+}
+
+.modal-body {
+    font-size: 1.6rem;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #fffdc0;
+    border-radius: 10px;
+}
+
+.modal-body.success {
+    background-color: #c3f2c4;
+    color: #2d7a2f;
+}
+
+.modal-body.error {
+    background-color: #f8c7c7;
+    color: #b13a3a;
+}

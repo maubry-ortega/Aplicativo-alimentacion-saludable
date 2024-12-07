@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona tu Rol</title>
+    <link rel="stylesheet" href="estudiantes.css">
+</head>
+<body>
+    <!-- Barra amarilla en la parte superior -->
+    <div class="header-bar">
+        <img src="LOGOS/LOGO.png" alt="Logo"> <!-- Logo de la empresa o aplicación -->
+        <h1>Vital Play Kids</h1>
+    </div>
+    <!-- Barra fucsia debajo de la barra amarilla -->
+    <div class="sub-bar">
+        <a href="rol.html">Regresar</a>
+    </div>
+
+    <!-- Contenedor para seleccionar los roles -->
+    <div class="container">
+        <h1>Conexión Estudiante</h1>
+        <form>
+            <input type="text" id="student-name" placeholder="Tu Nombre" required>
+            <br>
+            <button type="button" id="generate-name">Generar Nombre Temporal</button>
+            <a type="submit" href="../jugador/seleciones_genero/selecione_genero.html">Conectarse</a>
+        </form>
+        
+    </div>
+
+    <script>
+        // Lista de nombres genéricos
+        const names = [
+            "Explorador1", "Aventurero2", "Estrella3", "Valiente4", "Astronauta5",
+            "Mago6", "Guerrero7", "Capitán8", "Piloto9", "Viajero10",
+            "Héroe11", "Creador12", "Inventor13", "Constructor14", "Navegante15",
+            "Dragón16", "Pirata17", "Guardabosques18", "Detective19", "Cazatesoros20",
+            "Comandante21", "Soñador22", "Campeón23", "Corredor24", "Gamer25",
+            "Artista26", "Luchador27", "Maquinista28", "Leyenda29", "Pionero30"
+        ];
+
+        // Función para generar un nombre aleatorio
+        document.getElementById("generate-name").addEventListener("click", function() {
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            document.getElementById("student-name").value = randomName;
+        });
+    </script>
+</body>
+</html>

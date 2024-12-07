@@ -1,0 +1,165 @@
+/* Estilo para el cuerpo de la página */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('LOGOS/FONDO.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    color: white; /* Todo el texto será blanco */
+}
+
+/* Estilo para la barra amarilla en la parte superior */
+.header-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 80px;
+    background-color: #FFEB3B;
+    border-bottom-right-radius: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-bar img {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+}
+
+.header-bar h1 {
+    font-size: 1.8em;
+    color: hsl(0, 0%, 100%);
+    margin: 0;
+}
+
+/* Barra fucsia debajo de la barra amarilla */
+.sub-bar {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    width: 15%;
+    height: 60px;
+    background-color: #ED56AD;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sub-bar h1 {
+    font-size: 1.5em;
+    color: white;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.sub-bar .highlight.animated {
+    transform: scale(1.2);
+    color: #FFEB3B;
+}
+
+/* Contenedor de roles */
+.role-container {
+    text-align: center;
+    background: #FFEB3B;
+    padding: 15px 60px; /* Disminuí la altura de la caja */
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    border: 5px solid #FF9800;
+    margin-top: 100px;
+}
+
+/* Título "Selecciona tu Rol" */
+.role-container h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 2.5em;
+    margin-bottom: 30px; /* Ajusté el margen para dar más espacio */
+}
+
+/* Sugerencia para elegir un rol */
+.role-suggestion {
+    font-size: 1.3em;
+    color: #FF5722;
+    margin-top: 10px;
+}
+
+/* Botones de roles */
+.role-buttons {
+    display: flex;
+    justify-content: space-between; /* Aumenté el espacio entre los botones */
+    align-items: center;
+    margin-top: 50px; /* Ajusté el margen superior para mejor separación */
+    gap: 40px; /* Agregué más espacio entre los botones */
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 25px; /* Disminuí el padding de los botones */
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-align: center;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.profesor {
+    background-color: #8BC34A;
+    color: white;
+}
+
+.profesor:hover {
+    background-color: #7CB342;
+}
+
+.estudiante {
+    background-color: #03A9F4;
+    color: white;
+}
+
+.estudiante:hover {
+    background-color: #0288D1;
+}
+
+/* Iconos circulares */
+.icon-container {
+    width: 160px; /* Aumenté el tamaño de los iconos */
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px; /* Añadí un margen para separar el icono del texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container img {
+    width: 80%;
+    height: auto;
+}
+
+/* Estilo para el texto dentro de las casillas */
+button span {
+    font-size: 1.5em; /* Aumenté el tamaño del texto */
+    color: white; /* Aseguré que el texto sea blanco */
+    font-weight: bold;
+    text-transform: uppercase;
+}

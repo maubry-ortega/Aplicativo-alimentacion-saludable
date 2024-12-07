@@ -1,0 +1,210 @@
+/* Estilo general */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('LOGOS/FONDO\ 1.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
+/* Barra amarilla superior */
+.header-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 80px;
+    background-color: #F5CF54;
+    border-bottom-right-radius: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: highlight 2s infinite alternate;
+}
+
+.header-bar img {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+}
+
+.header-bar h1 {
+    font-size: 1.8em;
+    color: white;
+    margin: 0;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Barra fucsia debajo de la barra amarilla */
+.sub-bar {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    width: 15%;
+    height: 60px;
+    background-color: #ED56AD;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Mismo estilo de la primera barra */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sub-bar:hover {
+    background-color: #ED56AD;
+    transform: scale(1.05);
+}
+
+.sub-bar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sub-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    border: 5px solid rgba(255, 193, 7, 0.7);
+    margin-top: 100px;
+
+    /* Separación entre cajas */
+    margin-bottom: 5px;
+
+    width: 90%;
+    max-width: 500px; /* Ajustar el ancho de las cajas */
+}
+
+/* Título */
+.container h1 {
+    color: white;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Campos de entrada */
+form input {
+    width: 90%;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 2px solid #FF9800;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* Botón de enviar */
+form button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+form button:hover {
+    transform: scale(1.1);
+    background-color: #43A047;
+}
+
+/* Enlace recuperar contraseña */
+.recover-password {
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+.recover-password:hover {
+    text-decoration: underline;
+}
+
+/* Caja para opciones de inicio de sesión */
+.social-login-box {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    border: 3px solid #FFEB3B;
+    border-radius: 20px;
+    padding: 20px;
+
+    /* Separación entre cajas */
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    width: 90%;
+    max-width: 300px; /* Ajustar el ancho de las cajas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Íconos de redes sociales */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-login a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    width: 60px;
+    height: 60px;
+}
+
+.social-login img {
+    width: 35px; /* Tamaño del ícono aumentado */
+    height: 35px;
+    transition: transform 0.2s ease;
+}
+
+.social-login a:hover img {
+    transform: scale(1.2);
+}
+
+/* Animaciones */
+@keyframes highlight {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 235, 59, 1);
+    }
+}
+
+@keyframes glow {
+    0% {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        color: rgba(255, 255, 255, 1);
+    }
+}

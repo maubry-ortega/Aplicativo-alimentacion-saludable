@@ -1,0 +1,141 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('LOGOS/FONDO\ 1.png'); /* Agrega tu imagen de fondo aquí */
+    background-size: cover;
+    background-position: center;
+}
+
+.header-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 80px;
+    background-color: #F5CF54;
+    border-bottom-right-radius: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: highlight 2s infinite alternate;
+}
+
+.header-bar img {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+}
+
+.header-bar h1 {
+    font-size: 1.8em;
+    color: white;
+    margin: 0;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Barra fucsia debajo de la barra amarilla */
+.sub-bar {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    width: 15%;
+    height: 60px;
+    background-color: #ED56AD;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Mismo estilo de la primera barra */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sub-bar:hover {
+    background-color: #ED56AD;
+    transform: scale(1.05);
+}
+
+.sub-bar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sub-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del contenedor principal */
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con transparencia */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    color: black;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00B8D4; /* Azul agua marina */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0097A7; /* Azul agua marina oscuro */
+}
+
+/* Estilo del enlace de regreso */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #00B8D4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona tu Rol</title>
+    <link rel="stylesheet" href="rol.css">
+</head>
+<body>
+    <!-- Barra amarilla en la parte superior -->
+    <div class="header-bar">
+        <img src="LOGOS/LOGO.png" alt="Logo"> <!-- Logo de la empresa o aplicación -->
+        <h1>Vital Play Kids</h1>
+    </div>
+
+    <!-- Barra fucsia debajo de la barra amarilla -->
+    <div class="sub-bar">
+        <h1>¿Qué eres?</h1>
+    </div>
+
+    <!-- Contenedor para seleccionar los roles -->
+    <div class="role-container">
+        <h1 class="highlight">Selecciona tu Rol</h1>
+        <div class="role-buttons">
+            <button class="profesor" onclick="window.location.href='profesor.html'">
+                <div class="icon-container">
+                    <img src="LOGOS/PROFESOR.jpg" alt="Profesor">
+                </div>
+                <span>Profesor</span>
+            </button>
+            <button class="estudiante" onclick="window.location.href='./estudiante.html'">
+                <div class="icon-container">
+                    <img src="LOGOS/ESTUDIANTE.jpg" alt="Estudiante">
+                </div>
+                <span>Estudiante</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Script para la animación -->
+    <script>
+        const highlightText = document.querySelector('.highlight');
+        setInterval(() => {
+            highlightText.classList.toggle('animated');
+        }, 3000);
+    </script>
+</body>
+</html>
