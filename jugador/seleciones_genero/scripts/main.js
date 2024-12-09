@@ -11,7 +11,5 @@ function selectGender(element, gender) {
   // Habilita el botón de confirmar
   const confirmButton = document.getElementById('confirmar-btn');
   confirmButton.classList.remove('disabled');
-  confirmButton.href = `../../creacion_avatar/${gender.toLowerCase()}.html`; // Redirige dinámicamente
-
   console.log('Género seleccionado:', gender); // Consola para depuración
 }

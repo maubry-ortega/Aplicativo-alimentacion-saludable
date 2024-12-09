@@ -116,10 +116,10 @@ function selectOption(category, emoji) {
 }
 
 // Función para confirmar el avatar
-function confirmAvatar() {
-  const avatar = Array.from(document.querySelectorAll('.avatar-part')).map(part => part.textContent).join(" ");
-  alert(`¡Avatar confirmado: ${avatar}!`);
-}
+// function confirmAvatar() {
+//   const avatar = Array.from(document.querySelectorAll('.avatar-part')).map(part => part.textContent).join(" ");
+//   alert(`¡Avatar confirmado: ${avatar}!`);
+// }
 
 // Función para restablecer el avatar
 function resetAvatar() {

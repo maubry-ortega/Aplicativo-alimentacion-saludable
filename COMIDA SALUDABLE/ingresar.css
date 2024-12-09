@@ -20,7 +20,7 @@ body {
     top: 0;
     left: 0;
     width: 30%;
-    height: 80px;
+    height: 60px;
 }
 
 .header-logo {
@@ -40,8 +40,8 @@ body {
     position: absolute;
     top: 90px;
     left: 0;
-    width: 15%;
-    height: 60px;
+    width: 20%;
+    height: 50px;
     background-color: #ED56AD;
     border-bottom-right-radius: 40px;
     display: flex;
