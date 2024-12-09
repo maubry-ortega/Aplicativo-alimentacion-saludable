@@ -143,7 +143,7 @@ function changeCategory(category) {
   document.querySelectorAll('.category-button').forEach(btn => btn.classList.remove('active'));
   document.querySelector(`.category-button[onclick="changeCategory('${category}')"]`).classList.add('active');
 
-  const gender = window.location.href.includes('mujer') ? 'mujer' : 'hombre';
+  const gender = window.location.href.includes('mujer') ? 'hombre' : 'mujer';
   loadOptions(category, gender);
 }
 
@@ -152,12 +152,6 @@ function selectOption(category, emoji) {
   document.getElementById(category).textContent = emoji; // Actualizar avatar
   document.getElementById("confirm-btn").classList.remove("disabled"); // Habilitar el botón de confirmar
 }
-
-// Función para confirmar el avatar
-// function confirmAvatar() {
-//   const avatar = Array.from(document.querySelectorAll('.avatar-part')).map(part => part.textContent).join(" ");
-//   alert(`¡Avatar confirmado: ${avatar}!`);
-// }
 
 // Función para restablecer el avatar
 function resetAvatar() {
