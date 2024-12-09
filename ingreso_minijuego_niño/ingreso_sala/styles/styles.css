@@ -1,35 +1,88 @@
 /* === Estilos Generales === */
 body {
-  font-family: Arial, sans-serif; /* Corrección de 'sarif' */
-  background-color: #41A7F5;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: url('../img/FONDO.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+/* === Barra Amarilla === */
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #FFEB3B;
+  padding: 10px 20px;
+  border-bottom-right-radius: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 80px;
+}
+
+.header-logo {
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+}
+
+.header-title {
+  font-size: 2.2em;
+  color: hsl(0, 0%, 100%);
+  margin: 0;
+}
+
+/* === Barra Fucsia === */
+.sub-bar {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 20%;
+  height: 60px;
+  background-color: #ED56AD;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-bar-title {
+  font-size: 1.8em;
+  color: white;
+  margin: 0;
 }
 
 /* === Contenedor Principal === */
 .container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 350px;
   text-align: center;
+    background: #FFEB3B;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    border: 5px solid #FF9800;
+    margin-top: 150px;
+    width: 80%;
+    max-width: 500px;
 }
 
-/* === Encabezado === */
-h2 {
-  background-color: #F5CF54;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  font-size: 1.5em;
+/* Título del contenedor */
+.container-title {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 /* === Texto Informativo === */
-.info p {
+.info-text {
   font-size: 1em;
   margin-bottom: 15px;
   color: #333;
@@ -46,7 +99,13 @@ input {
   box-sizing: border-box;
 }
 
-/* === Botones y Enlaces === */
+/* === Botones === */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 .confirmar,
 .cancel {
   display: inline-block;
@@ -75,4 +134,16 @@ input {
 
 .cancel:hover {
   background-color: #D32F2F;
+}
+
+/* === Enlace a perfil === */
+.profile-link {
+  color: #FFEB3B;
+  font-size: 1.1em;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
 }
