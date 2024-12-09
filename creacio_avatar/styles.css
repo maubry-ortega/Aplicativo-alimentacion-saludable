@@ -1,0 +1,198 @@
+/* General */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('./assets/FONDO.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Barra amarilla */
+.header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #FFEB3B;
+    padding: 10px 20px;
+    border-bottom-right-radius: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-logo {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+}
+
+.header-title {
+    font-size: 2.2em;
+    color: #333333;
+    margin: 0;
+}
+
+/* Barra fucsia */
+.sub-bar {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 30%;
+    height: 60px;
+    background-color: #ED56AD;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.sub-bar-title {
+    font-size: 1.5em;
+    color: white;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.role-container {
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    background: #FFEB3B;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    color: #333333;
+}
+
+/* Categorías */
+.categories-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.category-button {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 1.2rem;
+    background-color: #FFEB3B;
+    border: 2px solid #333;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.category-button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.category-button:hover {
+    background-color: #FFC107;
+    transform: scale(1.1);
+}
+
+/* Avatar */
+.avatar-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar-part {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+/* Opciones */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.option {
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.option.locked {
+    background-color: #B0BEC5;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.option:hover:not(.locked) {
+    transform: scale(1.1);
+    background-color: #FFEB3B;
+}
+
+/* Botones */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-cancelar {
+    background-color: #F44336;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-cancelar:hover {
+    background-color: #D32F2F;
+}
+
+.btn-confirmar {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-confirmar.disabled {
+    background-color: #B0BEC5;
+    cursor: not-allowed;
+}
+
+.btn-confirmar:not(.disabled):hover {
+    background-color: #1976D2;
+}

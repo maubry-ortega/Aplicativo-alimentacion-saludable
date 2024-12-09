@@ -1,36 +1,32 @@
 body {
-        background-image: url(img/fondo_app_comida.png);
-        background-size: cover;       
-        /* background-position: center;  
-        background-repeat: no-repeat;  */
+    background-color: #03A9F4;
     }
 
 h1{
     background-color: #F5CF54;
     color: white;
-    border-radius: 15px;
-    width: 90%;
+    border-bottom-right-radius: 15px;
+    width: 400px;
     height: 40px;
+    padding-left: 15px;
+    margin-left: -15px;
 }
 
-.saludo{
+.regresar{
     background-color: #ED56AD;
     color: white;
     border: 20%;
-    border-radius: 15px;
+    border-bottom-right-radius: 15px;
     width: 150px;
     height: 40px;
-    text-align: center;
+    padding-left: 15px;
+    margin-left: -15px;
+}
+.regresar:hover{
+    background-color: #D43D91;
+    transform: scale(1.05);
 }
 
-.seleccion{
-        background-color: #58CAC1;
-        color: white;
-        border-radius: 15px;
-        width: 250px;
-        height: 40px;
-        text-align: center;
-}
 .circulos{
     height: 200px;
     width: 200px;
@@ -43,26 +39,64 @@ h1{
     padding: 15px; 
 }
 
-.botones{
-    margin-top: 14%;
-    margin-left: 40%;
-    font-size:larger;
+/* Contenedor principal */
+.action-container {
+    margin-top: 150px;
+    margin-left: 25%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #FFEB3B;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 600px;
+    color: white;
 }
 
-.crear_sala{
-    background-color: #58CAC1;
-    color:white;;
-    border-radius: 10px;
-    padding: 15px;
-    margin-right: 55px;
-    border: 50px;
+/* Texto de saludo */
+.greeting {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-.mis_clases{
-    background-color: #F5CF54;
-    color:white;
+/* Texto de acción */
+.action-prompt {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    color: #03A9F4;
+}
+
+/* Botones de acción */
+.btn {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
     border-radius: 10px;
-    padding: 15px;
-    margin-left: 55px;
-    border: 50px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    width: 80%;
+    max-width: 250px;
+    margin: 10px auto;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ED56AD;
+}
+
+.btn-primary:hover {
+    background-color: #D43D91;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #8BC34A;
+}
+
+.btn-secondary:hover {
+    background-color: #719f3d;
+    transform: scale(1.05);
 }

@@ -1,107 +1,124 @@
 body{
-    background-color: #41A7F5;
+    background-color: #03A9F4;
 }
 
 h1{
     background-color: #F5CF54;
     color: white;
-    border-radius: 20px;
-    width: 90%;
+    border-bottom-right-radius: 20px;
+    width: 400px;
     height: 40px;
+    margin-left: -15px;
     padding-left: 20px;
     padding-top: 5px;
 }
-
-h2{
-    background-color: #ED56AD;
-    color: white;
-    border-radius: 20px;
-    width: 300px;
-    height: 40px;
-    padding-left: 20px;
-    padding-top: 5px;
-}
-
-.clase{
-    background-color: #58CAC1;
-    color: white;
-    border-radius: 15px;
-    width: 72%;
-    height: 40px;
-    margin: 50px;
-    margin-bottom: 15px;
-    align-content: center;
-    right: 50px;
-}
-
-.participantes{
-    background-color: #58CAC1;
-    color: white;
-    border-radius: 15px;
-    width: 250px;
-    height: 40px;
-    position: fixed;
-    right: 50px;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-
-}
-
-.dropdown-btn {
-    margin: 50px;
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: #58CAC1;
-    color: white;
-    width: 72vw;
-    height: 40px;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-/* Estilo para la flecha */
-.dropdown-btn::after {
-    content: '\25BC';  
-    margin-left: 8px;  
-    font-size: 14px;   
-}
-
-.dropdown-content {
-    display: none;
+.regresar {
     position: absolute;
-    background-color: #58CAC1;
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 72vw;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    border-radius: 8px;
-    z-index: 1;
+    top: 90px;
+    left: 0px;
+    width: 15%;
+    height: 60px;
+    background-color: #ED56AD;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Mismo estilo de la primera barra */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+.sub-bar {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    width: 15%;
+    height: 60px;
+    background-color: #ED56AD;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Mismo estilo de la primera barra */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+.sub-bar:hover {
+    background-color: #ED56AD;
+    transform: scale(1.05);
+}
+
+.sub-bar a {
+    color: white;
     text-decoration: none;
-    display: block;
+    font-weight: bold;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
+.sub-bar a:hover {
+    text-decoration: underline;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.texto-crear{
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fff;
 }
 
-.dropdown-button:hover {
-    background-color: #45B3A3;
+/* Contenedor central */
+.action-container {
+    margin-top: 50px;
+    margin-left: 25%;
+    background: #FFEB3B;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
 }
+
+/* Inputs */
+.input {
+    background-color: #8BC24A;
+    color: white;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    height: 40px;
+    margin: 15px auto;
+    padding: 10px;
+    border: none;
+    font-size: 1.1em;
+}
+
+/* Botón siguiente */
+.btn {
+    background-color: #ED56AD;
+    font-size: 1.2em;
+    border-bottom-right-radius: 20px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px;
+    margin-left: -15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #D43D91;
+    transform: scale(1.05);
+}
+
 
 .siguiente{
     background-color: #ED56AD;
@@ -112,7 +129,7 @@ h2{
     height: 50px;
     position: fixed;
     bottom: 120px;    
-    right: -20px;   
+    right: -70px;   
     padding: 12px; 
     color: white;
 }
