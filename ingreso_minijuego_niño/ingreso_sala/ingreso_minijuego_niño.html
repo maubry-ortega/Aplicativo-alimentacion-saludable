@@ -3,21 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vital Play Kids - Imagen 2</title>
+  <title>Vital Play Kids - Ingresar a una Sala</title>
   <link rel="stylesheet" href="styles/styles.css"> <!-- Ruta al CSS -->
 </head>
 
 <body>
+  <!-- Barra Amarilla -->
+  <div class="header-bar">
+    <img src="./img/LOGO.png" alt="Logo" class="header-logo">
+    <h1 class="header-title">Vital Play Kids</h1>
+  </div>
+
+  <!-- Barra Fucsia -->
+  <div class="sub-bar">
+    <h2 class="sub-bar-title">Ingresar a una Sala</h2>
+  </div>
+
+  <!-- Contenedor Principal -->
   <div class="container">
-    <h2>Ingresar a una sala</h2>
+    <h2 class="container-title">¡Bienvenido! Ingresa al código de la sala</h2>
     <div class="info">
-      <p>Escribe el código para ingresar</p>
+      <p class="info-text">Escribe el código para ingresar a la sala y comenzar a jugar</p>
       <input type="text" id="codigo-sala" placeholder="Código de la sala">
-      <a href="../pantalla_espera/espera_jugaror.html" class="confirmar">Confirmar</a>
-      <a href="../../jugador/seleciones_genero/selecione_genero.html" class="cancel">Cancelar</a>
-      <a href="../../jugador/perfil/perfil.html">ir a perfil</a>
+      <div class="buttons">
+        <a href="../pantalla_espera/espera_jugaror.html" class="confirmar">Confirmar</a>
+        <a href="../../creacio_avatar/creacion_avatar.html" class="cancel">Cancelar</a>
+      </div>
+      <a href="../../jugador/perfil/perfil.html" class="profile-link">Ir a perfil</a>
     </div>
   </div>
 </body>
-
 </html>
