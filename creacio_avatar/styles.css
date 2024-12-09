@@ -1,0 +1,159 @@
+/* Estilo para el cuerpo de la página */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../assets/FONDO.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+/* Barra amarilla */
+.header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #FFEB3B;
+    padding: 10px 20px;
+    border-bottom-right-radius: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.header-logo {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+}
+
+.header-title {
+    font-size: 2.2em;
+    color: hsl(0, 0%, 100%);
+    margin: 0;
+}
+
+/* Barra fucsia */
+.sub-bar {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ED56AD;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-bar-title {
+    font-size: 1.8em;
+    color: white;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.role-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #FFEB3B;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    border: 5px solid #FF9800;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin-top: 140px;
+}
+
+/* Contenedor de categorías (izquierda) */
+.categories-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    justify-content: flex-start;
+    width: 25%;
+}
+
+.category-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-align: center;
+}
+
+.category-button.selected {
+    background-color: #ED56AD;
+    color: white;
+    border-color: #FF9800;
+}
+
+/* Avatar (centro) */
+.avatar-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 45%;
+}
+
+.avatar-part {
+    font-size: 5em;
+    margin-bottom: 15px;
+}
+
+/* Contenedor de opciones (derecha) */
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 25%;
+}
+
+.option-button {
+    font-size: 3em;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #FFEB3B;
+    transition: background-color 0.2s ease;
+    text-align: center;
+}
+
+.option-button:hover {
+    background-color: #FF9800;
+}
+
+/* Botones abajo */
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.btn-confirmar, .btn-cancelar {
+    font-size: 1.2em;
+    width: 48%;
+    margin: 0;
+}

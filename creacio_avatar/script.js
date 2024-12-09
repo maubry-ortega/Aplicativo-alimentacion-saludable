@@ -1,76 +1,105 @@
+// Datos de opciones con emojis y estado de bloqueo
 const optionsData = {
-    hair: [
-        { id: "hair1", emoji: "💇‍♂️", locked: false },
-        { id: "hair2", emoji: "💇‍♀️", locked: true },
-        { id: "hair3", emoji: "👩‍🎤", locked: false }
-    ],
-    skin: [
-        { id: "skin1", emoji: "🧑", locked: false },
-        { id: "skin2", emoji: "🧔", locked: false }
-    ],
-    shirt: [
+    hat: {
+      hombre: [
+        { id: "hat1", emoji: "🎩", locked: false },
+        { id: "hat2", emoji: "🧢", locked: false },
+        { id: "hat3", emoji: "🎓", locked: true }
+      ],
+      mujer: [
+        { id: "hat1", emoji: "👒", locked: false },
+        { id: "hat2", emoji: "🎀", locked: false },
+        { id: "hat3", emoji: "🎩", locked: true }
+      ]
+    },
+    head: {
+      hombre: [
+        { id: "head1", emoji: "🧔", locked: false },
+        { id: "head2", emoji: "👨", locked: false },
+        { id: "head3", emoji: "👦", locked: true }
+      ],
+      mujer: [
+        { id: "head1", emoji: "👩", locked: false },
+        { id: "head2", emoji: "👧", locked: false },
+        { id: "head3", emoji: "👵", locked: true }
+      ]
+    },
+    shirt: {
+      hombre: [
         { id: "shirt1", emoji: "👕", locked: false },
-        { id: "shirt2", emoji: "👔", locked: true }
-    ],
-    pants: [
+        { id: "shirt2", emoji: "👔", locked: true },
+        { id: "shirt3", emoji: "🧥", locked: false }
+      ],
+      mujer: [
+        { id: "shirt1", emoji: "👗", locked: false },
+        { id: "shirt2", emoji: "👚", locked: false },
+        { id: "shirt3", emoji: "🧥", locked: true }
+      ]
+    },
+    pants: {
+      hombre: [
         { id: "pants1", emoji: "👖", locked: false },
-        { id: "pants2", emoji: "🩳", locked: false }
-    ],
-    accessory: [
-        { id: "accessory0", emoji: "👒", locked: false },
+        { id: "pants2", emoji: "🩳", locked: false },
+        { id: "pants3", emoji: "👕", locked: true }
+      ],
+      mujer: [
+        { id: "pants1", emoji: "👖", locked: false },
+        { id: "pants2", emoji: "🩳", locked: false },
+        { id: "pants3", emoji: "👚", locked: true }
+      ]
+    },
+    accessory: {
+      hombre: [
         { id: "accessory1", emoji: "🕶️", locked: false },
-        { id: "accessory2", emoji: "🎩", locked: true }
-    ]
-};
-
-let currentCategory = "hair";
-
-const loadOptions = (category) => {
-    currentCategory = category;
-    const container = document.getElementById("options");
-    container.innerHTML = "";
-
-    optionsData[category].forEach(option => {
-        const div = document.createElement("div");
-        div.className = `option ${option.locked ? "locked" : ""}`;
-        div.innerHTML = option.emoji;
-
-        if (!option.locked) {
-            div.onclick = () => selectOption(category, option.emoji);
-        }
-        container.appendChild(div);
-    });
-
-    updateActiveCategory();
-}
-
-const selectOption = (category, emoji) => {
-    document.getElementById(category).innerHTML = emoji;
-}
-
-const updateActiveCategory = () => {
-    document.querySelectorAll(".category-btn").forEach(btn => btn.classList.remove("active"));
-    document.querySelector(`.category-btn[onclick="changeCategory('${currentCategory}')"]`).classList.add("active");
-}
-
-const confirmAvatar = () => {
-    alert("Avatar confirmado: " +
-        `Pelo: ${document.getElementById("hair").innerHTML}, ` +
-        `Piel: ${document.getElementById("skin").innerHTML}, ` +
-        `Camisa: ${document.getElementById("shirt").innerHTML}, ` +
-        `Pantalones: ${document.getElementById("pants").innerHTML}, ` +
-        `Accesorio: ${document.getElementById("accessory").innerHTML}`);
-}
-
-const resetAvatar = () => {
-    for (let category in optionsData) {
-        document.getElementById(category).innerHTML = optionsData[category][0].emoji;
+        { id: "accessory2", emoji: "🎩", locked: true },
+        { id: "accessory3", emoji: "🧢", locked: false }
+      ],
+      mujer: [
+        { id: "accessory1", emoji: "🎀", locked: false },
+        { id: "accessory2", emoji: "👒", locked: false },
+        { id: "accessory3", emoji: "💍", locked: true }
+      ]
     }
-}
-
-const changeCategory = (category) => {
-    loadOptions(category);
-}
-
-// Cargar opciones iniciales
-loadOptions("hair");
+  };
+  
+  // Función para cargar las opciones de la categoría
+  function loadOptions(category, gender) {
+    const container = document.getElementById("options");
+    container.innerHTML = ""; // Limpiar contenedor de opciones
+  
+    optionsData[category][gender].forEach(option => {
+      const div = document.createElement("div");
+      div.className = `option ${option.locked ? "locked" : ""}`;
+      div.innerHTML = option.emoji;
+  
+      if (!option.locked) {
+        div.onclick = () => selectOption(category, option.emoji);
+      }
+      container.appendChild(div);
+    });
+  }
+  
+  // Función para cambiar de categoría
+  function changeCategory(category, gender) {
+    loadOptions(category, gender);
+  }
+  
+  // Función para seleccionar una opción
+  function selectOption(category, emoji) {
+    document.getElementById(category).innerText = emoji;
+    document.getElementById("confirm-btn").classList.remove("disabled"); // Habilitar el botón de confirmar
+  }
+  
+  // Función para confirmar el avatar
+  function confirmAvatar() {
+    alert("¡Avatar confirmado!");
+  }
+  
+  // Función para restablecer el avatar
+  function resetAvatar() {
+    document.querySelectorAll('.avatar-part').forEach(part => {
+      part.innerHTML = "❓"; // Valor por defecto
+    });
+    document.getElementById("confirm-btn").classList.add("disabled"); // Deshabilitar el botón de confirmar
+  }
+  

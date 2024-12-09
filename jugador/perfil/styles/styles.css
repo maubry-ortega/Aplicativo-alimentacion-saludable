@@ -1,108 +1,145 @@
-/* Barra de Título */
-.perfil-header {
-    background-color: #2C3E50; /* Azul oscuro */
-    padding: 10px 20px;
-    border-bottom-right-radius: 60px;
+/* Estilo general */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('../assets/FONDO.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
 }
 
-/* Contenido del Perfil */
-.perfil-contenido {
-    background-color: #F1F2F6; /* Gris muy suave para el fondo */
-    padding: 20px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 15px;
+/* Barra amarilla */
+.header-bar {
+  display: flex;
+  align-items: center;
+  background-color: #FFEB3B;
+  padding: 10px 20px;
+  border-bottom-right-radius: 60px;
+  width: 30%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header-logo {
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+}
+
+.header-title {
+  font-size: 2.2em;
+  color: white;
+}
+
+/* Barra fucsia */
+.sub-bar {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 15%;
+  height: 60px;
+  background-color: #ED56AD;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-bar-title {
+  font-size: 1.8em;
+  color: white;
+}
+
+/* Contenedor de Perfil */
+.perfil-container {
+  background: #FFEB3B;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 150px;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Avatar */
 .perfil-avatar {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    margin-bottom: 15px;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
 
 /* Nombre y Edad */
 .perfil-nombre {
-    font-size: 2em;
-    font-weight: bold;
-    color: #34495E; /* Gris oscuro */
+  font-size: 2em;
+  font-weight: bold;
 }
 
 .perfil-edad {
-    font-size: 1.2em;
-    color: #7F8C8D; /* Gris claro */
+  font-size: 1.2em;
 }
 
 /* Descripción */
-.perfil-descripcion {
-    font-size: 1.1em;
-    color: #7F8C8D;
-    line-height: 1.6;
+.perfil-descripcion p {
+  color: #333;
+  font-size: 1.1em;
 }
 
 /* Barra de Progreso */
 .perfil-progreso .barra-progreso {
-    background-color: #BDC3C7; /* Gris claro */
-    border-radius: 10px;
-    height: 10px;
-    width: 100%;
+  background-color: #BDC3C7;
+  border-radius: 10px;
+  height: 10px;
+  width: 100%;
 }
 
 .perfil-progreso .progreso-actual {
-    background-color: #2ECC71; /* Verde claro */
-    border-radius: 10px;
-    height: 100%;
+  background-color: #2ECC71;
+  border-radius: 10px;
+  height: 100%;
 }
 
-/* Hobbies */
-.perfil-hobbies h4 {
-    font-size: 1.4em;
-    color: #2980B9; /* Azul para resaltar */
+/* Logros */
+.logros-container {
+  margin-top: 40px;
 }
 
-.perfil-hobbies p {
-    font-size: 1.1em;
-    color: #7F8C8D;
+.logro-item {
+  display: flex;
+  align-items: center;
+  background-color: #F8F9FA;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.logro-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.logro-titulo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.logro-estado {
+  color: #4CAF50;
 }
 
 /* Botón Salir */
 .btn-salir {
-    background-color: #FF5722; /* Naranja suave */
-    color: white;
-    border-radius: 15px;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  background-color: #FF5722;
+  border-radius: 15px;
 }
 
 .btn-salir:hover {
-    background-color: #E64A19; /* Naranja más oscuro */
-}
-
-/* Logros */
-.logros-categorias .logros-header {
-    background-color: #ED56AD; /* Fucsia suave */
-    padding: 15px;
-    border-radius: 10px;
-    color: white;
-}
-
-.logros-titulo {
-    font-size: 1.5em;
-    color: #333;
-}
-
-/* Estilo de Logros Completados */
-.logro-estado {
-    color: #4CAF50; /* Verde suave */
-    font-weight: bold;
-}
-
-/* Fondo de los logros */
-.logros-lista .logro-item {
-    background-color: #F8F9FA; /* Fondo suave para cada logro */
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px;
+  background-color: #E64A19;
 }

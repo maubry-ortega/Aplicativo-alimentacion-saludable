@@ -1,72 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perfil</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-  </head>
-  <body>
-    <!-- Barra de Título -->
-    <div class="perfil-header bg-primary py-3 text-center">
-      <div class="perfil-titulo text-white h2">Perfil</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - Vital Play Kids</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+  <!-- Barra amarilla -->
+  <div class="header-bar d-flex align-items-center">
+    <img src="./assets/LOGO.png" alt="Logo" class="header-logo">
+    <h1 class="header-title">Vital Play Kids</h1>
+  </div>
+
+  <!-- Barra fucsia -->
+  <div class="sub-bar">
+    <h1 class="sub-bar-title">Mi Perfil</h1>
+  </div>
+
+  <!-- Contenedor de Perfil -->
+  <div class="container perfil-container text-center">
+    <img class="perfil-avatar rounded mb-3" src="./assets/avatar.png" alt="Avatar">
+    <p class="perfil-nombre">Pepito</p>
+    <p class="perfil-edad">Edad: 8 años</p>
+    <div class="perfil-descripcion mb-4">
+      <p>Soy un jugador increíblemente rápido y me encanta explorar mundos nuevos.</p>
     </div>
-
-    <!-- Contenedor de Perfil -->
-    <div class="perfil-contenido container text-center mt-4 p-4 border rounded shadow-lg bg-light">
-      <!-- Avatar -->
-      <img class="perfil-avatar rounded mb-3" src="./assets/avatar.png" alt="Avatar" />
-      <p class="perfil-nombre h3 text-dark">Pepito</p>
-      <p class="perfil-edad text-muted">Edad: 8 años</p>
-
-      <!-- Descripción del Usuario -->
-      <div class="perfil-descripcion mb-4">
-        <p class="text-muted">Soy un jugador increíblemente rápido y me encanta explorar mundos nuevos.</p>
+    <div class="perfil-progreso mb-4">
+      <div class="barra-progreso">
+        <div class="progreso-actual" style="width: 60%;"></div>
       </div>
-
-      <!-- Barra de Progreso -->
-      <div class="perfil-progreso mb-4">
-        <div class="barra-progreso">
-          <div class="progreso-actual bg-success" style="width: 60%;"></div>
-        </div>
-        <p class="progreso-texto mt-2"><small>150px</small> para pasar al nivel 3</p>
-      </div>
-
-      <!-- Hobbies -->
-      <div class="perfil-hobbies">
-        <h4 class="text-primary">Hobbies</h4>
-        <p class="text-muted">Jugar a la pelota, coleccionar cartas y ver dibujos animados.</p>
-      </div>
+      <p class="progreso-texto mt-2"><small>150px</small> para pasar al nivel 3</p>
     </div>
+    <div class="perfil-hobbies">
+      <h4>Hobbies</h4>
+      <p>Jugar a la pelota, coleccionar cartas y ver dibujos animados.</p>
+    </div>
+  </div>
 
-    <!-- Logros y Categorías -->
-    <div class="logros-categorias mt-4 container">
-      <div class="logros-header d-flex justify-content-between align-items-center mb-3">
-        <div class="logros-color">
-          <p class="logros-titulo text-primary h4">Historial de logros</p>
-        </div>
-        <button class="categoria-btn btn btn-secondary">Categorías</button>
-      </div>
-
-      <!-- Lista de Logros -->
-      <div class="logros-lista">
-        <div class="logro-item d-flex align-items-center mb-3 p-3 border rounded" style="background-color: #F8F9FA;">
-          <img src="./assets/clock 2.png" alt="Logro" class="img-fluid" style="width: 50px; height: 50px; margin-right: 15px;">
-          <div>
-            <p class="logro-titulo h5 mb-1">Recolector Veloz</p>
-            <p class="logro-desc text-muted mb-1">Recolectaste 30 frutas en menos de 1 minuto</p>
-            <p class="logro-estado text-success fw-bold">Completado</p>
-          </div>
+  <!-- Logros y Categorías -->
+  <div class="logros-container mt-4 container">
+    <h3 class="logros-titulo">Historial de Logros</h3>
+    <div class="logros-lista">
+      <div class="logro-item">
+        <img src="./assets/clock 2.png" alt="Logro">
+        <div>
+          <p class="logro-titulo">Recolector Veloz</p>
+          <p class="logro-desc">Recolectaste 30 frutas en menos de 1 minuto</p>
+          <p class="logro-estado">Completado</p>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Botón Salir -->
-    <div class="text-center mt-4">
-      <a href="../../ingreso_minijuego_niño/ingreso_sala/ingreso_minijuego_niño.html" class="btn btn-danger btn-salir">Salir</a>
-    </div>
+  <!-- Botón Salir -->
+  <div class="text-center mt-4">
+    <a href="../../ingreso_minijuego_niño/ingreso_sala/ingreso_minijuego_niño.html" class="btn btn-danger btn-salir">Salir</a>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  <script src="./scripts/main.js"></script>
+</body>
 </html>

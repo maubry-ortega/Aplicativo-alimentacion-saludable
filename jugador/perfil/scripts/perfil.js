@@ -1,3 +1,3 @@
 document.addEventListener('DOMContentLoaded', () => {
-    alert('Bienvenido a tu perfil, Pepito.');
-  });
+  alert('Bienvenido a tu perfil, Pepito.');
+});
