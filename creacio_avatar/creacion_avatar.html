@@ -20,11 +20,11 @@
   </div>
 
   <!-- Contenedor principal -->
-  <div class="role-container">
+  <div class="container role-container">
     <div class="row">
-      <!-- Contenedor de categorías (izquierda) -->
-      <div class="col-4">
-        <h3>Selecciona una categoría</h3>
+      <!-- Categorías (izquierda) -->
+      <div class="col-3 categories-container">
+        <h3 class="text-center">Categorías</h3>
         <button class="category-button" onclick="changeCategory('hat')">Sombrero</button>
         <button class="category-button" onclick="changeCategory('head')">Cabeza</button>
         <button class="category-button" onclick="changeCategory('shirt')">Camiseta</button>
@@ -33,7 +33,7 @@
       </div>
 
       <!-- Avatar (centro) -->
-      <div class="col-4 avatar-preview">
+      <div class="col-6 avatar-preview text-center">
         <div id="hat" class="avatar-part">🎩</div>
         <div id="head" class="avatar-part">🧔</div>
         <div id="shirt" class="avatar-part">👕</div>
@@ -41,14 +41,15 @@
         <div id="accessory" class="avatar-part">🕶️</div>
       </div>
 
-      <!-- Contenedor de opciones (derecha) -->
-      <div class="col-4 options-container">
+      <!-- Opciones (derecha) -->
+      <div class="col-3 options-container">
+        <h3 class="text-center">Opciones</h3>
         <div id="options" class="option-row"></div>
       </div>
     </div>
 
     <!-- Botones -->
-    <div class="buttons">
+    <div class="buttons text-center mt-4">
       <button class="btn btn-danger btn-cancelar" onclick="resetAvatar()">Cancelar</button>
       <button id="confirm-btn" class="btn btn-info btn-confirmar disabled" onclick="confirmAvatar()">Confirmar</button>
     </div>
@@ -56,7 +57,6 @@
 
   <script src="./script.js"></script>
   <script>
-    // Determinar el género por URL o algún parámetro
     const gender = window.location.href.includes('mujer') ? 'mujer' : 'hombre';
     loadOptions('hat', gender);
 
