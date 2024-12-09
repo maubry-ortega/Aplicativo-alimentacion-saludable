@@ -1,132 +1,157 @@
 body {
-    background-color: #f4f8fb;
-    font-family: 'Arial', sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .game-header {
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(135deg, #ffcc00, #ff8800);
-    color: white;
-    border-radius: 0 0 20px 20px;
-  }
+.game-container {
+  background: url("../../PROYECTO/LOGOS/FONDO.png") no-repeat center center;
+  background-size: cover;
+}
+.game-header {
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 80px;
+  background-color: #ffeb3b;
+  border-bottom-right-radius: 60px;
+}
 
-  .game-header h1 {
-    font-size: 3rem;
-    margin: 0;
-  }
+.game-header img {
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+}
 
-  .game-header p {
-    font-size: 1.5rem;
-  }
+.sub-bar {
+  top: 90px;
+  left: 0px;
+  width: 15%;
+  height: 60px;
+  background-color: #ed56ad;
+  border-bottom-right-radius: 40px;
+}
 
-  .vitamin-zone {
-    border: 2px dashed #ccc;
-    padding: 20px;
-    border-radius: 15px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-height: 200px;
-    position: relative;
-  }
+.lives {
+  font-size: 2rem;
+  z-index: 10;
+}
 
-  .vitamin-zone h5 {
-    color: #ff8800;
-    font-weight: bold;
-  }
+.lives i {
+  color: #ff0000;
+}
 
-  .food-item {
-    width: 80px;
-    height: 80px;
-    margin: 10px;
-    display: inline-block;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    cursor: grab;
-  }
+.vitamin-zone {
+  min-height: 200px;
+  position: relative;
+  border: 2px dashed #ccc;
+}
 
-  .food-item img {
-    width: 60%;
-    margin-top: 10px;
-  }
+.vitamin-zone h5 {
+  color: #ff8800;
+}
 
-  .lives {
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    font-size: 2rem;
-    z-index: 10;
-  }
+.food-item {
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+  background-color: #8bc34a;
+  cursor: grab;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
 
-  .lives i {
-    color: #ff0000;
-    margin-right: 10px;
-  }
+.food-item:hover {
+  transform: scale(1.1);
+  background-color: #7cb342;
+}
 
-  .modal-content {
-    background-color: #f7f7f7;
-    border-radius: 10px;
-    padding: 30px;
-  }
+.food-item img {
+  max-width: 80%;
+  
+}
 
-  .modal-header, .modal-footer {
-    border: none;
-  }
+.img-container{
+  width: 160px; /* Aumenté el tamaño de los iconos */
+    height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  .modal-title {
-    font-size: 2.5rem;
-    color: #ff8800;
-    text-align: center;
-  }
+.modal-content {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 30px;
+}
 
-  .modal-body {
-    font-size: 1.6rem;
-    color: #333;
-    text-align: center;
-    font-weight: bold;
-    padding: 20px;
-    background-color: #fffdc0;
-    border-radius: 10px;
-  }
+.modal-header,
+.modal-footer {
+  border: none;
+}
 
-  .modal-body.success {
-    background-color: #c3f2c4;
-    color: #2d7a2f;
-  }
+.modal-title {
+  font-size: 2.5rem;
+  color: #ff8800;
+  text-align: center;
+}
 
-  .modal-body.error {
-    background-color: #f8c7c7;
-    color: #b13a3a;
-  }
+.modal-body {
+  font-size: 1.6rem;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+  background-color: #fffdc0;
+  border-radius: 10px;
+}
 
-  .modal-body.info {
-    background-color: #fff4c4;
-    color: #ff9900;
-  }
+.modal-body.success {
+  background-color: #c3f2c4;
+  color: #2d7a2f;
+}
 
-  .modal-body p {
-    font-size: 1.8rem;
-  }
+.modal-body.error {
+  background-color: #f8c7c7;
+  color: #b13a3a;
+}
 
-  .modal-body i {
-    font-size: 3rem;
-    margin-bottom: 20px;
+.modal-body.info {
+  background-color: #fff4c4;
+  color: #ff9900;
+}
+
+.modal-body p {
+  font-size: 1.8rem;
+}
+
+.modal-body i {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
   }
-  @keyframes shake {
-0% { transform: translateX(0); }
-25% { transform: translateX(-5px); }
-50% { transform: translateX(5px); }
-75% { transform: translateX(-5px); }
-100% { transform: translateX(0); }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .food-item.shake {
-animation: shake 0.5s;
+  animation: shake 0.5s;
 }
 
 .vitamin-zone.correct {
-background-color: #c3f2c4; /* Verde */
-transition: background-color 0.5s;
+  background-color: #c3f2c4; /* Verde */
+  transition: background-color 0.5s;
 }

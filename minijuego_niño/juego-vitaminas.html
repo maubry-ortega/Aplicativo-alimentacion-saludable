@@ -1,110 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juego de Vitaminas</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de Vitaminas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div
+      class="game-container container-fluid d-flex justify-content-center flex-column align-items-center vh-100 text-white"
+    >
+      <div class="container-fluid mt-4">
+        <!-- Barra amarilla en la parte superior -->
+        <div
+          class="game-header d-flex align-items-center p-2 shadow position-absolute"
+        >
+          <img src="../PROYECTO/LOGOS/LOGO.png" alt="Logo" class="img-fluid" />
+          <h1 class="text-white fs-1 fw-bold mb-0">Vital Play Kids</h1>
+        </div>
 
-<div class="game-header">
-  <h1>Vitamin Game</h1>
-  <p>Arrastra los alimentos hacia la vitamina correcta</p>
-</div>
+        <!-- Barra fucsia debajo de la barra amarilla -->
+        <div
+          class="sub-bar d-flex align-items-center p-2 shadow position-absolute w-auto h-auto"
+        >
+          <h1 class="text-white fs-2 fw-bold mb-0 pe-5">¡Vitaminas Game!</h1>
+        </div>
 
-<div class="lives">
-  <i class="fas fa-heart" id="heart1"></i>
-  <i class="fas fa-heart" id="heart2"></i>
-  <i class="fas fa-heart" id="heart3"></i>
-</div>
+        <div class="lives position-absolute top-0 end-0 p-3">
+          <i class="fas fa-heart me-2" id="heart1"></i>
+          <i class="fas fa-heart me-2" id="heart2"></i>
+          <i class="fas fa-heart" id="heart3"></i>
+        </div>
+      </div>
 
-<div class="container my-5">
-  <div class="row">
-    <!-- Zona de Vitaminas -->
-    <div class="col-md-4">
-      <div class="vitamin-zone" id="vitaminA" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <h5>Vitamina A</h5>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="vitamin-zone" id="vitaminC" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <h5>Vitamina C</h5>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="vitamin-zone" id="vitaminD" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <h5>Vitamina D</h5>
-      </div>
-    </div>
-  </div>
+      <div class="container mt-5">
+        <div class="row text-center mx-auto">
+          <div class="col-md-4">
+            <div
+              class="vitamin-zone p-3 rounded-3 bg-white shadow-sm"
+              id="vitaminA"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+            >
+              <h5 class="text-warning fw-bold">Vitamina A</h5>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="vitamin-zone p-3 rounded-3 bg-white shadow-sm"
+              id="vitaminC"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+            >
+              <h5 class="text-warning fw-bold">Vitamina C</h5>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="vitamin-zone p-3 rounded-3 bg-white shadow-sm"
+              id="vitaminD"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+            >
+              <h5 class="text-warning fw-bold">Vitamina D</h5>
+            </div>
+          </div>
+        </div>
 
-  <div class="row text-center mt-4">
-    <!-- Elementos de Alimentos -->
-    <div class="food-item" draggable="true" ondragstart="drag(event)" id="carrot" style="width: 200px; height: 250px; text-align: center;">
-      <img src="https://www.pngitem.com/pimgs/m/135-1359965_transparent-carrots-png-vegetable-carrot-png-download.png" alt="Carrot" style="width: 80%; margin-top: 20px;">
-      <p style="font-size: 1.2rem; margin-top: 15px;">Zanahoria</p>
-    </div>
-    <div class="food-item" draggable="true" ondragstart="drag(event)" id="orange" style="width: 200px; height: 250px; text-align: center;">
-      <img src="https://i.pinimg.com/736x/3c/bf/ec/3cbfec1259635898efae5b57ea3ddea3.jpg" alt="Orange" style="width: 80%; margin-top: 20px;">
-      <p style="font-size: 1.2rem; margin-top: 15px;">Naranja</p>
-    </div>
-    <div class="food-item" draggable="true" ondragstart="drag(event)" id="avocado" style="width: 200px; height: 250px; text-align: center;">
-      <img src="https://i.pinimg.com/originals/d7/ea/7a/d7ea7a3ad9110b018fbba872da72dbee.png" alt="Avocado" style="width: 80%; margin-top: 20px;">
-      <p style="font-size: 1.2rem; margin-top: 15px;">Aguacate</p>
-    </div>
-  </div>
-</div>
+        <div class="row text-center mt-4 mx-auto">
+          <!-- Elementos de Alimentos -->
 
-<!-- Modales -->
-<div class="modal" tabindex="-1" id="gameOverModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">¡Juego Terminado!</h5>
+          <div
+            class="food-item p-3 rounded shadow-sm text-white d-flex flex-column align-items-center"
+            draggable="true"
+            ondragstart="drag(event)"
+            id="carrot"
+          >
+            <div class="img-container d-flex justify-content-center align-items-center">
+              <img
+                src="https://www.pngitem.com/pimgs/m/135-1359965_transparent-carrots-png-vegetable-carrot-png-download.png"
+                alt="Carrot"
+                class="img-fluid mb-3"
+              />
+            </div>
+            <span class="fw-bold fs-4 text-uppercase">Zanahoria</span>
+          </div>
+          <div
+            class="food-item p-3 rounded shadow-sm text-white d-flex flex-column align-items-center"
+            draggable="true"
+            ondragstart="drag(event)"
+            id="orange"
+          >
+            <div class="img-container d-flex justify-content-center align-items-center">
+              <img
+                src="https://i.pinimg.com/736x/3c/bf/ec/3cbfec1259635898efae5b57ea3ddea3.jpg"
+                alt="Orange"
+                class="img-fluid mb-3"
+              />
+            </div>
+            <span class="fw-bold fs-4 text-uppercase">Naranja</span>
+          </div>
+          <div
+            class="food-item p-3 rounded shadow-sm text-white d-flex flex-column align-items-center"
+            draggable="true"
+            ondragstart="drag(event)"
+            id="avocado"
+          >
+            <div class="img-container d-flex justify-content-center align-items-center">
+              <img
+                src="https://i.pinimg.com/originals/d7/ea/7a/d7ea7a3ad9110b018fbba872da72dbee.png"
+                alt="Avocado"
+                class="img-fluid mb-3"
+              />
+            </div>
+            <span class="fw-bold fs-4 text-uppercase">Aguacate</span>
+          </div>
+        </div>
       </div>
-      <div class="modal-body error">
-        <i class="fas fa-sad-tear"></i>
-        <p>¡Vaya! Has perdido todas tus vidas, pero no te preocupes, ¡puedes intentarlo de nuevo y mejorar!</p>
+
+      <!-- Modales -->
+      <div class="modal" tabindex="-1" id="gameOverModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">¡Juego Terminado!</h5>
+            </div>
+            <div class="modal-body error">
+              <i class="fas fa-sad-tear"></i>
+              <p>
+                ¡Vaya! Has perdido todas tus vidas, pero no te preocupes,
+                ¡puedes intentarlo de nuevo y mejorar!
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-warning"
+                data-bs-dismiss="modal"
+                onclick="restartGame()"
+              >
+                Reiniciar Juego
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-warning" data-bs-dismiss="modal" onclick="restartGame()">Reiniciar Juego</button>
+
+      <div class="modal" tabindex="-1" id="victoryModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">¡Bien Hecho!</h5>
+            </div>
+            <div class="modal-body success">
+              <i class="fas fa-smile-beam"></i>
+              <p>
+                ¡Increíble! Has completado el juego. Hoy has aprendido acerca de
+                las vitaminas. ¡No olvides consumirlas para estar saludable!
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-success"
+                data-bs-dismiss="modal"
+                onclick="restartGame()"
+              >
+                Reiniciar Juego
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="modal" tabindex="-1" id="encouragementModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body info">
+              <p id="encouragementMessage"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="./assets/main.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </div>
-  </div>
-</div>
-
-<div class="modal" tabindex="-1" id="victoryModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">¡Bien Hecho!</h5>
-      </div>
-      <div class="modal-body success">
-        <i class="fas fa-smile-beam"></i>
-        <p>¡Increíble! Has completado el juego. Hoy has aprendido acerca de las vitaminas. ¡No olvides consumirlas para estar saludable!</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="restartGame()">Reiniciar Juego</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal" tabindex="-1" id="encouragementModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body info">
-        <p id="encouragementMessage"></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="./assets/main.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
