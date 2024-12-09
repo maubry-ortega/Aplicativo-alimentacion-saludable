@@ -12,7 +12,7 @@ body {
   top: 0;
   left: 0;
   width: 30%;
-  height: 80px;
+  height: 60px;
   background-color: #ffeb3b;
   border-bottom-right-radius: 60px;
 }
@@ -24,8 +24,8 @@ body {
 }
 
 .sub-bar {
-  top: 90px;
-  left: 0px;
+  top: 10%;
+  left: 0;
   width: 15%;
   height: 60px;
   background-color: #ed56ad;
@@ -53,7 +53,7 @@ body {
 
 .food-item {
   width: 200px;
-  height: 250px;
+  height: 210px;
   margin: 10px;
   background-color: #8bc34a;
   cursor: grab;
