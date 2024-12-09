@@ -10,10 +10,14 @@
     <h1>Vital play kids</h1>
     <a href="./Seleccion.html" class="btn regresar">regresar</a>
     <div class="action-container">
-        <h2 class="texto-crear">crear nueva clase</h2>
-        <input type="number" placeholder="Cantidad de participantes" class="input participantes">
-        <input type="text" placeholder="Ingrese nombre de la clase" class="input clase">
-        <select name="tema" id="tema" class="input tema">
+        <h2 class="texto-crear">Crear nueva clase</h2>
+        <input id="participantes" type="number" placeholder="Cantidad de participantes" class="input participantes">
+        <p id="error-participantes" class="error-message"></p>
+        
+        <input id="clase" type="text" placeholder="Ingrese nombre de la clase" class="input clase">
+        <p id="error-clase" class="error-message"></p>
+        
+        <select id="tema" class="input tema">
             <option value="" disabled selected>Tema de enseñanza</option>
             <option value="1">1. Comida saludable</option>
             <option value="2">2. Frutas divertidas</option>
@@ -21,8 +25,12 @@
             <option value="4">4. Alimentos monstruo</option>
             <option value="5">5. La lonchera perfecta</option>
         </select>
-        <a href="../COMIDA SALUDABLE/ingresar.html" class="btn siguiente">Siguiente</a>
-    </div>
+        <p id="error-tema" class="error-message"></p>
+        
+        <a href="../COMIDA SALUDABLE/ingresar.html" id="boton-siguiente" class="btn siguiente">Siguiente</a>
+
+    </div>    
     <div class="circulos"></div>
+    <script src="validaciones.js"></script>
 </body>
 </html>
