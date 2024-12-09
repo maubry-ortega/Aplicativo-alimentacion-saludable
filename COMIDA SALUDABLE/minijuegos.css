@@ -1,0 +1,90 @@
+
+
+body {
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('img/FONDO.png') no-repeat center center;
+    height: 200vh;
+    background-size: cover;
+    position: relative;
+   
+}
+.header-bar img {
+ height: 60px;
+width: 60px;
+margin-right: 10px;
+}
+
+.header-bar {
+    position: static;
+    background-color: #ffd700;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+    border-bottom-right-radius: 40px;
+}
+.header-bar h1 {
+    color: #fff;
+    margin: 5;
+    font-size: 24px;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+
+
+}
+.subtitulo {
+    margin-top: 2rem;
+    background-color: #ff69b4;
+    padding: 1rem;
+    color: #fff;
+    border-radius: 40px;
+    font-size: 5px;
+
+
+    
+}
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-top: 2rem;
+}
+.tarjeta {
+    background-color: #e7eef8;
+    border-radius: 0.6rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 1.5rem;
+    text-align: center;
+}
+.tarjeta img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 0rem;
+}
+.tarjeta h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+.tarjeta p {
+    margin-top: 0.5rem;
+    text-align:center;
+}
+.tarjeta button {
+    margin-top: 1rem;
+    background-color: #ff69b4;
+    color: #fcf9f9;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+.tarjeta button:hover {
+    background-color: #840c99;
+}

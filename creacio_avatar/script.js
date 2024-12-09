@@ -1,63 +1,82 @@
-// Datos de opciones con emojis y estado de bloqueo
-const optionsData = {
+const optionsData = { 
   hat: {
     hombre: [
       { id: "hat1", emoji: "🎩", locked: false },
       { id: "hat2", emoji: "🧢", locked: false },
-      { id: "hat3", emoji: "🎓", locked: true }
+      { id: "hat3", emoji: "🎓", locked: true },
+      { id: "hat4", emoji: "🧣", locked: false },  // Bufanda (estilo invierno)
+      { id: "hat5", emoji: "👒", locked: false }   // Sombrero de ala ancha
     ],
     mujer: [
       { id: "hat1", emoji: "👒", locked: false },
       { id: "hat2", emoji: "🎀", locked: false },
-      { id: "hat3", emoji: "🎩", locked: true }
+      { id: "hat3", emoji: "🎩", locked: true },
+      { id: "hat4", emoji: "🧣", locked: false },  // Bufanda (estilo invierno)
+      { id: "hat5", emoji: "👑", locked: false }   // Corona (estilo elegante)
     ]
   },
   head: {
     hombre: [
       { id: "head1", emoji: "🧔", locked: false },
       { id: "head2", emoji: "👨", locked: false },
-      { id: "head3", emoji: "👦", locked: true }
+      { id: "head3", emoji: "👦", locked: true },
+      { id: "head4", emoji: "🧑‍🦱", locked: false },  // Hombre de cabello rizado
+      { id: "head5", emoji: "👴", locked: false }    // Hombre mayor
     ],
     mujer: [
       { id: "head1", emoji: "👩", locked: false },
       { id: "head2", emoji: "👧", locked: false },
-      { id: "head3", emoji: "👵", locked: true }
+      { id: "head3", emoji: "👵", locked: true },
+      { id: "head4", emoji: "👩‍🦳", locked: false }, // Mujer con cabello blanco
+      { id: "head5", emoji: "👩‍🦰", locked: false }  // Mujer con cabello rojo
     ]
   },
   shirt: {
     hombre: [
       { id: "shirt1", emoji: "👕", locked: false },
       { id: "shirt2", emoji: "👔", locked: true },
-      { id: "shirt3", emoji: "🧥", locked: false }
+      { id: "shirt3", emoji: "🧥", locked: false },
+      { id: "shirt4", emoji: "🧸", locked: false },  // Camiseta con estampado
+      { id: "shirt5", emoji: "🦋", locked: false }   // Camisa con estampado artístico
     ],
     mujer: [
       { id: "shirt1", emoji: "👗", locked: false },
       { id: "shirt2", emoji: "👚", locked: false },
-      { id: "shirt3", emoji: "🧥", locked: true }
+      { id: "shirt3", emoji: "🧥", locked: true },
+      { id: "shirt4", emoji: "👚", locked: false },  // Blusa de manga larga
+      { id: "shirt5", emoji: "👙", locked: false }   // Blusa de playa
     ]
   },
   pants: {
     hombre: [
       { id: "pants1", emoji: "👖", locked: false },
       { id: "pants2", emoji: "🩳", locked: false },
-      { id: "pants3", emoji: "👕", locked: true }
+      { id: "pants3", emoji: "👕", locked: true },
+      { id: "pants4", emoji: "👖", locked: false },  // Jeans rotos
+      { id: "pants5", emoji: "🧳", locked: false }   // Pantalones deportivos
     ],
     mujer: [
       { id: "pants1", emoji: "👖", locked: false },
       { id: "pants2", emoji: "🩳", locked: false },
-      { id: "pants3", emoji: "👚", locked: true }
+      { id: "pants3", emoji: "👚", locked: true },
+      { id: "pants4", emoji: "👗", locked: false },  // Falda larga
+      { id: "pants5", emoji: "👢", locked: false }   // Pantalón de cuero
     ]
   },
   accessory: {
     hombre: [
       { id: "accessory1", emoji: "🕶️", locked: false },
-      { id: "accessory2", emoji: "🎩", locked: true },
-      { id: "accessory3", emoji: "🧢", locked: false }
+      { id: "accessory2", emoji: "🎧", locked: false },  // Auriculares
+      { id: "accessory3", emoji: "🧣", locked: false },   // Bufanda
+      { id: "accessory4", emoji: "📱", locked: false },   // Teléfono móvil
+      { id: "accessory5", emoji: "💼", locked: false }    // Maletín
     ],
     mujer: [
       { id: "accessory1", emoji: "🎀", locked: false },
-      { id: "accessory2", emoji: "👒", locked: false },
-      { id: "accessory3", emoji: "💍", locked: true }
+      { id: "accessory2", emoji: "💍", locked: true },   // Anillo
+      { id: "accessory3", emoji: "👗", locked: false },  // Collar de perlas
+      { id: "accessory4", emoji: "👜", locked: false },   // Bolso elegante
+      { id: "accessory5", emoji: "💄", locked: false }    // Pintalabios
     ]
   }
 };

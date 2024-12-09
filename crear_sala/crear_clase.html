@@ -8,20 +8,21 @@
 </head>
 <body>
     <h1>Vital play kids</h1>
-    <h2>crear nueva clase</h2>
-    <input type="number" placeholder="cantidad de participantes" class="participantes"></input>
-    <input type="text" placeholder=" ingrese nombre de la clase" class="clase"></input>
-    <div class="dropdown">
-        <button class="dropdown-btn">Seleccione el tema de enseñanza</button>
-        <div class="dropdown-content">
-            <a href="">1.Comida saludable</a>
-            <a href="">2.frutas divertidas</a>
-            <a href="">3.Verduras geniales</a>
-            <a href="">4.alimentos monstruo</a>
-            <a href="">5.La lonchera perfecta</a> 
-        </div>
+    <a href="./Seleccion.html" class="btn regresar">regresar</a>
+    <div class="action-container">
+        <h2 class="texto-crear">crear nueva clase</h2>
+        <input type="number" placeholder="Cantidad de participantes" class="input participantes">
+        <input type="text" placeholder="Ingrese nombre de la clase" class="input clase">
+        <select name="tema" id="tema" class="input tema">
+            <option value="" disabled selected>Tema de enseñanza</option>
+            <option value="1">1. Comida saludable</option>
+            <option value="2">2. Frutas divertidas</option>
+            <option value="3">3. Verduras geniales</option>
+            <option value="4">4. Alimentos monstruo</option>
+            <option value="5">5. La lonchera perfecta</option>
+        </select>
+        <button class="btn siguiente">Siguiente</button>
     </div>
-    <a class="siguiente" href="../creacion_minijuegos/creacion/index.html" >Siguiente</a>
     <div class="circulos"></div>
 </body>
 </html>

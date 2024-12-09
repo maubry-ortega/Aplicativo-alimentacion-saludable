@@ -1,107 +1,82 @@
 body{
-    background-color: #41A7F5;
+    background-color: #03A9F4;
 }
 
 h1{
     background-color: #F5CF54;
     color: white;
-    border-radius: 20px;
-    width: 90%;
+    border-bottom-right-radius: 20px;
+    width: 400px;
     height: 40px;
+    margin-left: -15px;
     padding-left: 20px;
     padding-top: 5px;
 }
-
-h2{
+.regresar{
     background-color: #ED56AD;
     color: white;
-    border-radius: 20px;
-    width: 300px;
-    height: 40px;
-    padding-left: 20px;
-    padding-top: 5px;
+    border: 20%;
+    border-bottom-right-radius: 15px;
+    width: 150px;
+    height: 30px;
+    padding-left: 15px;
+    margin-left: -15px;
 }
 
-.clase{
-    background-color: #58CAC1;
-    color: white;
-    border-radius: 15px;
-    width: 72%;
-    height: 40px;
-    margin: 50px;
+.texto-crear{
+    font-size: 1.8em;
+    font-weight: bold;
     margin-bottom: 15px;
-    align-content: center;
-    right: 50px;
+    color: #fff;
 }
 
-.participantes{
-    background-color: #58CAC1;
+/* Contenedor central */
+.action-container {
+    margin-top: 50px;
+    margin-left: 25%;
+    background: #FFEB3B;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Inputs */
+.input {
+    background-color: #8BC24A;
     color: white;
     border-radius: 15px;
-    width: 250px;
+    width: 90%;
+    max-width: 400px;
     height: 40px;
-    position: fixed;
-    right: 50px;
+    margin: 15px auto;
+    padding: 10px;
+    border: none;
+    font-size: 1.1em;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-
-}
-
-.dropdown-btn {
-    margin: 50px;
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: #58CAC1;
+/* Botón siguiente */
+.btn {
+    background-color: #ED56AD;
+    font-size: 1.2em;
+    border-bottom-right-radius: 20px;
+    padding: 10px;
     color: white;
-    width: 72vw;
-    height: 40px;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-/* Estilo para la flecha */
-.dropdown-btn::after {
-    content: '\25BC';  
-    margin-left: 8px;  
-    font-size: 14px;   
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #58CAC1;
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 72vw;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    border-radius: 8px;
-    z-index: 1;
-}
-
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
     text-decoration: none;
-    display: block;
+    display: inline-block;
+    margin: 15px;
+    margin-left: -15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
+.btn:hover {
+    background-color: #D43D91;
+    transform: scale(1.05);
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-button:hover {
-    background-color: #45B3A3;
-}
 
 .siguiente{
     background-color: #ED56AD;
@@ -112,7 +87,7 @@ h2{
     height: 50px;
     position: fixed;
     bottom: 120px;    
-    right: -20px;   
+    right: -70px;   
     padding: 12px; 
     color: white;
 }
