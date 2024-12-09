@@ -20,49 +20,39 @@
   </div>
 
   <!-- Contenedor principal -->
-  <div class="container role-container">
-    <div class="row">
-      <!-- Categorías (izquierda) -->
-      <div class="col-3 categories-container">
-        <h3 class="text-center">Categorías</h3>
-        <button class="category-button" onclick="changeCategory('hat')">Sombrero</button>
-        <button class="category-button" onclick="changeCategory('head')">Cabeza</button>
-        <button class="category-button" onclick="changeCategory('shirt')">Camiseta</button>
-        <button class="category-button" onclick="changeCategory('pants')">Pantalones</button>
-        <button class="category-button" onclick="changeCategory('accessory')">Accesorios</button>
-      </div>
-
-      <!-- Avatar (centro) -->
-      <div class="col-6 avatar-preview text-center">
-        <div id="hat" class="avatar-part">🎩</div>
-        <div id="head" class="avatar-part">🧔</div>
-        <div id="shirt" class="avatar-part">👕</div>
-        <div id="pants" class="avatar-part">👖</div>
-        <div id="accessory" class="avatar-part">🕶️</div>
-      </div>
-
-      <!-- Opciones (derecha) -->
-      <div class="col-3 options-container">
-        <h3 class="text-center">Opciones</h3>
-        <div id="options" class="option-row"></div>
-      </div>
+  <div class="container-fluid role-container">
+    <!-- Categorías (izquierda) -->
+    <div class="categories-container">
+      <h3>Categorías</h3>
+      <button class="category-button active" onclick="changeCategory('hat')">Sombrero</button>
+      <button class="category-button" onclick="changeCategory('head')">Cabeza</button>
+      <button class="category-button" onclick="changeCategory('shirt')">Camiseta</button>
+      <button class="category-button" onclick="changeCategory('pants')">Pantalones</button>
+      <button class="category-button" onclick="changeCategory('accessory')">Accesorios</button>
     </div>
 
-    <!-- Botones -->
-    <div class="buttons text-center mt-4">
-      <button class="btn btn-danger btn-cancelar" onclick="resetAvatar()">Cancelar</button>
-      <button id="confirm-btn" class="btn btn-info btn-confirmar disabled" onclick="confirmAvatar()">Confirmar</button>
+    <!-- Avatar (centro) -->
+    <div class="avatar-preview text-center">
+      <div id="hat" class="avatar-part">🎩</div>
+      <div id="head" class="avatar-part">🧔</div>
+      <div id="shirt" class="avatar-part">👕</div>
+      <div id="pants" class="avatar-part">👖</div>
+      <div id="accessory" class="avatar-part">🕶️</div>
+    </div>
+
+    <!-- Opciones (derecha) -->
+    <div class="options-container">
+      <h3>Opciones</h3>
+      <div id="options"></div>
     </div>
   </div>
 
-  <script src="./script.js"></script>
-  <script>
-    const gender = window.location.href.includes('mujer') ? 'mujer' : 'hombre';
-    loadOptions('hat', gender);
+  <!-- Botones -->
+  <div class="buttons text-center mt-3">
+    <button class="btn btn-danger btn-cancelar" onclick="resetAvatar()">Cancelar</button>
+    <button id="confirm-btn" class="btn btn-info btn-confirmar disabled" onclick="confirmAvatar()">Confirmar</button>
+  </div>
 
-    function changeCategory(category) {
-      loadOptions(category, gender);
-    }
-  </script>
+  <script src="./script.js"></script>
 </body>
 </html>
